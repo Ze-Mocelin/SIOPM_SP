@@ -25,20 +25,13 @@
 
                                     <ul class="list-group list-group-unbordered mb-3">
                                         <li class="list-group-item">
-                                            <b>Criado em: </b> <a class="float-right">12/07/2023 16:52</a>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <b>Criado por:</b> <a class="float-right">1524525</a>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <b>Ultimo Acesso:</b> <a class="float-right">13/08/2023 18:20</a>
+                                            <b>RAMAL:</b> <a class="float-right">3149</a>
                                         </li>
                                         <li class="list-group-item">
                                             <b>Batalhão</b> <a class="float-right">49ºBPM/M</a>
                                         </li>
                                     </ul>
 
-                                    <a href="#" class="btn btn-primary btn-block"><b>Verificar Usuário</b></a>
                                 </div>
                             </div>
                         </div>

@@ -25,6 +25,7 @@ Route::post('/login2', [App\Http\Controllers\LoginController::class, 'login']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //Route::group(['middleware' => 'group'], function () {
 
+Route::middleware(['auth'])->group(function () {
     Route::post('home/sessao', [App\Http\Controllers\HomeController::class, 'sessao'])->name('home.sessao');
     Route::get('/home2', [App\Http\Controllers\HomeController::class, 'index2'])->name('home2');
     Route::get('/toggle-dark-mode', 'App\Http\Controllers\HomeController@toggleDarkMode')->name('toggle-dark-mode');
@@ -80,6 +81,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
     Route::post('despachador/observar', [App\Http\Controllers\DespachadorController::class, 'despachadorobservar'])->name('despachador.observar');
     Route::post('despachador/redirecionar', [App\Http\Controllers\DespachadorController::class, 'despachadorredirecionar'])->name('despachador.redirecionar');
     Route::post('despachador/detalhes_ocorrencias', [App\Http\Controllers\DespachadorController::class, 'despachadordetalhesocorrencia'])->name('despachador.detalhes.ocorrencias');
+    Route::get('despachador/organogramadespachador', [App\Http\Controllers\DespachadorController::class, 'organogramadespachador'])->name('despachador.organograma');
+    Route::get('despachador/organograma190', [App\Http\Controllers\DespachadorController::class, 'organograma190'])->name('despachador.organograma190');
+
 
 
     Route::get('gerenciarcpa', [App\Http\Controllers\GerenciarcpaController::class, 'index'])->name('gerenciarcpa');
@@ -89,7 +93,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
     Route::get('ajax/{function?}', [App\Http\Controllers\AjaxController::class, 'index']);
     Route::get('chefia/estatistica', [App\Http\Controllers\ChefiaController::class, 'index']);
     Route::get('chefia/logados', [App\Http\Controllers\ChefiaController::class, 'logados'])->name('chefia.logados');
-    Route::get('chefia/organograma_despacho', [App\Http\Controllers\ChefiaController::class, 'organogramadespacho'])->name('chefia.organograma_despacho');
+    Route::get('chefia/organograma_despachador_chefia', [App\Http\Controllers\ChefiaController::class, 'organogramadespachadorchefia'])->name('chefia.organograma_despachador.chefia');
     Route::get('chefia/organograma190', [App\Http\Controllers\ChefiaController::class, 'organograma190'])->name('chefia.organograma190');
 
     Route::get('supervisor190/estatistica', [App\Http\Controllers\Supervisor190Controller::class, 'index']);
@@ -116,7 +120,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
     Route::get('/viewed-publications', [App\Http\Controllers\PublicationController::class, 'index'])->name('viewed-publications');
 
     Route::post('/newfolder-publication', [App\Http\Controllers\PublicationController::class, 'incluirNovaPasta'])->name('newfolder-publication');
-
+});
 //});
 /*
 Auth::routes();

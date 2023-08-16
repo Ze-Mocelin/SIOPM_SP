@@ -107,11 +107,11 @@ $cidades = App\Models\Cidade::all();
                                             <div class="col-md-10">
 
                                                 <!--<div class="card-header">
-                                                                                                                    <h3 class="card-title">
-                                                                                                                        <i class="fas fa-edit"></i>
-                                                                                                                        Cadastro de Emergência
-                                                                                                                    </h3>
-                                                                                                                </div>-->
+                                                                                                                        <h3 class="card-title">
+                                                                                                                            <i class="fas fa-edit"></i>
+                                                                                                                            Cadastro de Emergência
+                                                                                                                        </h3>
+                                                                                                                    </div>-->
                                                 <div class="card-body">
                                                     <form method="POST" autocomplete="off"
                                                         action="{{ url('cadastro190') }}">
@@ -133,14 +133,19 @@ $cidades = App\Models\Cidade::all();
                                                                 </div>
                                                                 <div class="col-md-2">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        id="checkboxAnonimo" name='checkboxAnonimo' value='1' onchange="toggleAnonimo()">
+                                                                        id="checkboxAnonimo" name='checkboxAnonimo'
+                                                                        value='1' onchange="toggleAnonimo()">
                                                                     <label for="checkboxAnonimo">Anônimo</label>
                                                                 </div>
                                                                 <div class="col-md-4">
 
                                                                     <div class="form-group">
                                                                         <label for="inputTelefone">Telefone</label>
-                                                                        <input type="text" name="inputTelefone" class="form-control" id="inputTelefone" placeholder="Telefone" value="{{ old('inputTelefone') }}" required maxlength="11">
+                                                                        <input type="text" name="inputTelefone"
+                                                                            class="form-control" id="inputTelefone"
+                                                                            placeholder="Telefone"
+                                                                            value="{{ old('inputTelefone') }}" required
+                                                                            maxlength="11">
                                                                         <div class="text-danger">
                                                                             {{ $errors->first('inputTelefone') }}
                                                                         </div>
@@ -202,8 +207,7 @@ $cidades = App\Models\Cidade::all();
                                                                         <input type="text" name="inputComplemento"
                                                                             class="form-control" id="inputComplemento"
                                                                             placeholder="Complemento"
-                                                                            value="{{ old('inputComplemento') }}"
-                                                                            >
+                                                                            value="{{ old('inputComplemento') }}">
                                                                         <div class="text-danger">
                                                                             {{ $errors->first('inputComplemento') }}
                                                                         </div>
@@ -299,65 +303,77 @@ $cidades = App\Models\Cidade::all();
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="row">
-                                                                <div class="col-md-2"></div>
-                                                                <div class="col-md-4">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        value="1" name="checkPolicial"
-                                                                        id="checkPolicial">
-                                                                    <label class="form-check-label"
-                                                                        for="checkPolicial">POLICIAL EM
-                                                                        PERIGO</label>
-                                                                    <div id="mensagem"
-                                                                        class="bg-danger text-white font-weight-bold text-center"style="display: none;">
-                                                                        ⚠️ VOCÊ SELECIONOU A OPÇÃO POLICIAL
-                                                                        EM PERIGO ⚠️
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+
                                                             <div class="row">
                                                                 <div class="hidden">
                                                                     <input type="hidden" value=""
-                                                                        id="inputHidden_celular_numeroimei" name="inputHidden_celular_numeroimei">
+                                                                        id="inputHidden_celular_numeroimei"
+                                                                        name="inputHidden_celular_numeroimei">
                                                                     <input type="hidden" value=""
-                                                                        id="inputHidden_celular_modelo" name="inputHidden_celular_modelo">
+                                                                        id="inputHidden_celular_modelo"
+                                                                        name="inputHidden_celular_modelo">
                                                                     <input type="hidden" value=""
-                                                                        id="inputHidden_celular_marca" name="inputHidden_celular_marca">
+                                                                        id="inputHidden_celular_marca"
+                                                                        name="inputHidden_celular_marca">
                                                                     <input type="hidden" value=""
-                                                                        id="inputHidden_celular_situacao" name="inputHidden_celular_situacao">
+                                                                        id="inputHidden_celular_situacao"
+                                                                        name="inputHidden_celular_situacao">
                                                                     <input type="hidden" value=""
-                                                                        id="inputHidden_veiculo_placa" name="inputHidden_veiculo_placa">
+                                                                        id="inputHidden_veiculo_placa"
+                                                                        name="inputHidden_veiculo_placa">
                                                                     <input type="hidden" value=""
-                                                                        id="inputHidden_veiculo_marca" name="inputHidden_veiculo_marca">
+                                                                        id="inputHidden_veiculo_marca"
+                                                                        name="inputHidden_veiculo_marca">
                                                                     <input type="hidden" value=""
-                                                                        id="inputHidden_veiculo_modelo" name="inputHidden_veiculo_modelo">
+                                                                        id="inputHidden_veiculo_modelo"
+                                                                        name="inputHidden_veiculo_modelo">
                                                                     <input type="hidden" value=""
-                                                                        id="inputHidden_veiculo_cor" name="inputHidden_veiculo_cor">
+                                                                        id="inputHidden_veiculo_cor"
+                                                                        name="inputHidden_veiculo_cor">
                                                                     <input type="hidden" value=""
-                                                                        id="inputHidden_veiculo_chassi" name="inputHidden_veiculo_chassi">
+                                                                        id="inputHidden_veiculo_chassi"
+                                                                        name="inputHidden_veiculo_chassi">
                                                                     <input type="hidden" value=""
-                                                                        id="inputHidden_veiculo_situacao" name="inputHidden_veiculo_situacao">
+                                                                        id="inputHidden_veiculo_situacao"
+                                                                        name="inputHidden_veiculo_situacao">
                                                                     <input type="hidden" value=""
-                                                                        id="inputHidden_pessoas_rg" name="inputHidden_pessoas_rg">
+                                                                        id="inputHidden_pessoas_rg"
+                                                                        name="inputHidden_pessoas_rg">
                                                                     <input type="hidden" value=""
-                                                                        id="inputHidden_pessoas_nome" name="inputHidden_pessoas_nome">
+                                                                        id="inputHidden_pessoas_nome"
+                                                                        name="inputHidden_pessoas_nome">
                                                                     <input type="hidden" value=""
                                                                         id="inputHidden_pessoas_situacao" name="">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                 </div>
+
+
+
+
+
+
+
+
                                                 <div class="row">
-                                                    <div class="col-12 text-center">
+                                                    <div class="col-6 text-center">
+                                                        <button type="button" class="btn btn-block btn-outline-danger btn-sm text-center" id="btnAlert">POLICIAL EM PERIGO</button>
+                                                        <div id="confirmationSection" style="display: none;">
+                                                            <p>VOCE SELECIONOU POLICIAL EM PERIGO?</p>
+                                                            <button type="button" class="btn btn-primary" id="btnConfirm">Confirmar</button>
+                                                            <button type="button" class="btn btn-secondary" id="btnCancel">Cancelar</button>
+                                                        </div>
 
+                                                    </div>
+
+                                                    <div class="col-6 text-center">
                                                         <!-- Seu conteúdo de formulário aqui -->
-
-                                                        <button type="submit" id="botaoSalvar"
-                                                            class="btn btn-block btn-success toastrDefaultSuccess">Próximo</button>
-
+                                                        <button type="submit" id="botaoSalvar" class="btn btn-block btn-outline-primary btn-sm text-center">Próximo</button>
                                                     </div>
                                                 </div>
 
+                                            </form>
                                             </div>
                                         </div>
                                     </div>
@@ -372,9 +388,30 @@ $cidades = App\Models\Cidade::all();
 @endsection
 
 @section('js')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#btnAlert').click(function() {
+            $('#btnAlert').hide();
+            $('#confirmationSection').show();
+        });
+
+        $('#btnCancel').click(function() {
+            $('#btnAlert').show();
+            $('#confirmationSection').hide();
+        });
+
+        $('#btnConfirm').click(function() {
+            $('#dispatcherAck').show();
+            $('#btnAlert').prop('disabled', true);
+            $('#btnAlert').text('DESPACHADOR CIENTE CONTINUE O CADASTRO');
+            $('#btnAlert').removeClass('btn-outline-danger').addClass('btn-danger'); // Change button color
+            $('#confirmationSection').hide();
+        });
+    });
+</script>
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
             $('#btnAlert').click(function() {
@@ -435,16 +472,16 @@ $cidades = App\Models\Cidade::all();
         var inputSelectAdress = document.getElementById("inputSelectAdress");
 
         inputCidade.addEventListener("input", function(event) {
-    if (event.inputType === "insertLineBreak" || event.inputType === "insertText") {
-        fetchCEP();
-    }
-    });
+            if (event.inputType === "insertLineBreak" || event.inputType === "insertText") {
+                fetchCEP();
+            }
+        });
 
-    inputNumero.addEventListener("input", function(event) {
-        if (event.inputType === "insertLineBreak" || event.inputType === "insertText") {
-            fetchAddress();
-        }
-    });
+        inputNumero.addEventListener("input", function(event) {
+            if (event.inputType === "insertLineBreak" || event.inputType === "insertText") {
+                fetchAddress();
+            }
+        });
 
 
 
@@ -594,122 +631,8 @@ $cidades = App\Models\Cidade::all();
             });
         });
 
-        //STEP-BY-STEP
-        $(document).ready(function() {
-
-            var current_fs, next_fs, previous_fs; //fieldsets
-            var opacity;
 
 
-
-            $(".next").click(function() {
-
-                current_fs = $(this).parent();
-                next_fs = $(this).parent().next();
-
-                //Add Class Active
-                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
-                //show the next fieldset
-                next_fs.show();
-                //hide the current fieldset with style
-                current_fs.animate({
-                    opacity: 0
-                }, {
-                    step: function(now) {
-                        // for making fielset appear animation
-                        opacity = 1 - now;
-
-                        current_fs.css({
-                            'display': 'none',
-                            'position': 'relative'
-                        });
-                        next_fs.css({
-                            'opacity': opacity
-                        });
-                    },
-                    duration: 600
-                });
-            });
-
-            $(".previous").click(function() {
-
-                current_fs = $(this).parent();
-                previous_fs = $(this).parent().prev();
-
-                //Remove class active
-                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
-                //show the previous fieldset
-                previous_fs.show();
-
-                //hide the current fieldset with style
-                current_fs.animate({
-                    opacity: 0
-                }, {
-                    step: function(now) {
-                        // for making fielset appear animation
-                        opacity = 1 - now;
-
-                        current_fs.css({
-                            'display': 'none',
-                            'position': 'relative'
-                        });
-                        previous_fs.css({
-                            'opacity': opacity
-                        });
-                    },
-                    duration: 600
-                });
-            });
-
-            $('.radio-group .radio').click(function() {
-                $(this).parent().find('.radio').removeClass('selected');
-                $(this).addClass('selected');
-            });
-
-            $(".submit").click(function() {
-                return false;
-            })
-
-        });
-    </script>
-
-    <script>
-        var current = 0;
-        var tabs = $(".tab");
-        var tabs_pill = $(".tab-pills");
-
-        loadFormData(current);
-
-        function loadFormData(n) {
-            $(tabs_pill[n]).addClass("active");
-            $(tabs[n]).removeClass("d-none");
-            $("#back_button").attr("disabled", n == 0 ? true : false);
-            n == tabs.length - 1 ?
-                $("#next_button").text("Submit").removeAttr("onclick") :
-                $("#next_button")
-                .attr("type", "button")
-                .text("Next")
-                .attr("onclick", "next()");
-        }
-
-        function next() {
-            $(tabs[current]).addClass("d-none");
-            $(tabs_pill[current]).removeClass("active");
-
-            current++;
-            loadFormData(current);
-        }
-
-        function back() {
-            $(tabs[current]).addClass("d-none");
-            $(tabs_pill[current]).removeClass("active");
-
-            current--;
-            loadFormData(current);
-        }
-    </script>
     <script>
         // Obtém os botões por seus IDs
         const btnAlertaParcial = document.getElementById('btnAlertaParcial');

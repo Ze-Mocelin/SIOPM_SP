@@ -241,9 +241,10 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-app bg-success custom-btn modal-show" data-bpmm_id="1" data-toggle="modal" data-target="#modal-user-bpm">
-                                <i class="fas fa-users"></i> 149ºBPM/M
+                            <a class="btn btn-app bg-success custom-btn modal-show" data-bpmm_id="1" data-toggle="modal" data-target="#modal-perfil">
+                                <i class="fas fa-users"></i> 49ºBPM/M
                             </a>
+                            @include('modal.organograma.perfil_despachador')
                             <a class="btn btn-app bg-success custom-btn">
                                 <i class="fas fa-users"></i> 23ºBPM/M
                             </a>
@@ -398,35 +399,6 @@
         </div>
         </div>
     </section>
-
-    <div class="modal fade" id="modal-user-bpm">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content bg-secondary">
-                <div class="modal-header">
-                    <h4 class="modal-title">BPM/M - editar </h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-
-
-                    <div class="card-body">
-Teste
-                    </div>
-                <!-- /.card-body -->
-                </div>
-
-                <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Fechar</button>
-                    <button type="submit" class="btn btn-outline-light">Salvar</button>
-
-                </div>
-            </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
 
 @endsection
 

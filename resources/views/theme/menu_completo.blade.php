@@ -141,6 +141,22 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link  " href="{{ url('despachador/organogramadespachador') }}">
+                                <i class="fa-brands fa-searchengin" style="margin-right: 5px;"></i>
+                                <p>
+                                    Organograma Despacho
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  " href="{{ url('despachador/organograma190') }}">
+                                <i class="fa-brands fa-searchengin" style="margin-right: 5px;"></i>
+                                <p>
+                                    Organograma 190
+                                </p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item has-treeview ">
@@ -459,7 +475,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  " href="{{ url('chefia/organograma_despacho') }}">
+                            <a class="nav-link  " href="{{ url('chefia/organograma_despachador_chefia') }}">
                                 <i class="fa-solid fa-building-circle-arrow-right" style="margin-right: 5px;"></i>
                                 <p>
                                     Organograma Despacho

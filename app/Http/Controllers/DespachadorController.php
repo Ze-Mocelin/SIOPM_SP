@@ -192,6 +192,14 @@ class DespachadorController extends Controller
     /**
      * Show the form for creating a new resource.
      */
+    public function organogramadespachador(){
+        return view('organograma_batalhoes');
+    }
+
+    public function organograma190(){
+        return view('organograma190');
+    }
+
     public function create()
     {
         //

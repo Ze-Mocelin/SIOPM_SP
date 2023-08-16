@@ -19,14 +19,14 @@ class ChefiaController extends Controller
         return view('chefialogados');
     }
 
-    public function organogramadespacho()
+    public function organogramadespachadorchefia()
     {
-        return view('batalhoeschefia');
+        return view('organograma_batalhoeschefia');
     }
 
     public function organograma190()
     {//trocar view
-        return view('batalhoeschefia');
+        return view('organograma190');
     }
     /**
      * Show the form for creating a new resource.
